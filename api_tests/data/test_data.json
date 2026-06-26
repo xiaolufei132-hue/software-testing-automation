@@ -1,0 +1,12 @@
+{
+  "users": [
+    {"name": "张三", "email": "zhangsan@test.com", "expected_status": 201},
+    {"name": "", "email": "empty@test.com", "expected_status": 400},
+    {"name": "李四", "email": "invalid-email", "expected_status": 400}
+  ],
+  "posts": [
+    {"title": "测试标题1", "userId": 1, "expected_title_contains": "测试"},
+    {"title": "", "userId": 1, "expected_status": 400},
+    {"title": "a" * 300, "userId": 1, "expected_status": 201}
+  ]
+}
